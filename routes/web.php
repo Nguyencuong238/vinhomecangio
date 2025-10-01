@@ -67,6 +67,7 @@ Route::get('lien-he', [HomeController::class, 'contact'])->name('contact');
 Route::get('gallery', [HomeController::class, 'gallery'])->name('gallery');
 Route::get('tien-do', [HomeController::class, 'progress'])->name('progress');
 Route::get('tien-ich', [HomeController::class, 'utility'])->name('utility');
+Route::get('vi-tri', [HomeController::class, 'location'])->name('location');
 
 //Route::get('register', [HomeController::class, 'register'])->name('register');
 

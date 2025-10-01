@@ -59,7 +59,9 @@
     @yield('css')
 
     <style>
-        
+        .nav-logo {
+            cursor: pointer;
+        }
     </style>
 </head>
 
@@ -82,7 +84,7 @@
             <ul class="nav-menu">
                 <li><a href="/" class="nav-link @if(request()->routeIs('home')) menu-active @endif">Trang Chủ</a></li>
                 <li><a href="{{route('about')}}" class="nav-link @if(request()->routeIs('about')) menu-active @endif">Giới Thiệu</a></li>
-                {{-- <li><a href="{{route('location')}}" class="nav-link @if(request()->routeIs('location')) menu-active @endif">Vị Trí</a></li> --}}
+                <li><a href="{{route('location')}}" class="nav-link @if(request()->routeIs('location')) menu-active @endif">Vị Trí</a></li>
                 <li><a href="{{route('utility')}}" class="nav-link @if(request()->routeIs('utility')) menu-active @endif">Tiện Ích</a></li>
                 <li><a href="{{route('gallery')}}" class="nav-link @if(request()->routeIs('gallery')) menu-active @endif">Hình Ảnh</a></li>
                 <li><a href="{{route('news')}}" class="nav-link @if(request()->routeIs('news')) menu-active @endif">Tin Tức</a></li>
@@ -329,6 +331,10 @@
             });
             $(form).find('button').prop('disabled', false);
         }
+
+        $('.nav-logo').on('click', function() {
+            window.location.href = '/';
+        });  
     </script>
     @yield('js')
 </body>

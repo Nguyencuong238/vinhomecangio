@@ -273,6 +273,7 @@
 
                 <!-- Sidebar -->
                 <aside class="sidebar">
+                    <div class="position-sticky" style="top: 85px;">
                     <!-- Search Widget -->
                     <div class="sidebar-widget">
                         <h3 class="widget-title">Tìm Kiếm</h3>
@@ -341,6 +342,7 @@
                                 <a href="{{ route('news', ['tag' => $tag->slug]) }}">{{ $tag->name }}</a>
                             @endforeach
                         </div>
+                    </div>
                     </div>
                 </aside>
             </div>

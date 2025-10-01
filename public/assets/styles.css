@@ -1392,7 +1392,7 @@ p {
     }
 
     .newsletter-form {
-        flex-direction: column;
+        /* flex-direction: column; */
     }
 
     .newsletter-form button {

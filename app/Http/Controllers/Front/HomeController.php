@@ -43,7 +43,7 @@ class HomeController extends Controller
             })
             ->orderByDesc('is_featured')
             ->orderByDesc('id')
-            ->paginate(2);
+            ->paginate(6);
 
         $newPosts = Post::where('status', 1)
             ->when(request()->search, function ($q) {
@@ -81,6 +81,11 @@ class HomeController extends Controller
     public function contact(Request $req)
     {
         return view('front.contact');
+    }
+
+    public function location(Request $req)
+    {
+        return view('front.location');
     }
 
     public function gallery(Request $req)
