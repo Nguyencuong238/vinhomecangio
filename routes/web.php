@@ -108,9 +108,9 @@ Route::get('vi-tri', [HomeController::class, 'location'])->name('location');
 
 
 
-Route::get('gioi-thieu', [FrontPageController::class, 'about'])->name('front.pages.about');
-Route::get('dich-vu', [FrontPageController::class, 'service'])->name('front.pages.service');
-Route::get('doi-tac', [FrontPageController::class, 'partner'])->name('front.pages.partner');
+// Route::get('gioi-thieu', [FrontPageController::class, 'about'])->name('front.pages.about');
+// Route::get('dich-vu', [FrontPageController::class, 'service'])->name('front.pages.service');
+// Route::get('doi-tac', [FrontPageController::class, 'partner'])->name('front.pages.partner');
 
 
 // Route::get('the/{slug}', PostTagController::class)->name('postTag');
