@@ -59,7 +59,7 @@ use App\Http\Middleware\IsAdmin;
 
 Route::get('login', [HomeController::class, 'login'])->name('login');
 Route::get('/', [HomeController::class, 'index'])->name('home');
-Route::get('tong-quan', [HomeController::class, 'about'])->name('about');
+Route::get('gioi-thieu', [HomeController::class, 'about'])->name('about');
 Route::get('tin-tuc', [HomeController::class, 'news'])->name('news');
 Route::get('tin-tuc/{post:slug}', [HomeController::class, 'newsDetail'])->name('news_detail');
 
