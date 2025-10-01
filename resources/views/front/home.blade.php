@@ -1,0 +1,523 @@
+@extends('layouts.front')
+
+@section('css')
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.core.min.css">
+
+    <style>
+        .overview-item.utilities-image {
+            padding: 0;
+        }
+
+        .overview-item.utilities-image img {
+            height: 330px;
+        }
+
+        .utility-card img {
+            height: 330px;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        .utilities-grid.mt-30 .utility-card img {
+            height: 250px;
+        }
+
+        .glide__arrows {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+            pointer-events: none;
+            /* để tránh block hover slide */
+        }
+
+        .glide__arrow {
+            pointer-events: all;
+            /* bật lại sự kiện cho nút */
+            background: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            border: none;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            font-size: 20px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .glide__arrow:hover {
+            background: rgba(0, 0, 0, 0.8);
+        }
+
+        .glide__bullets {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+            gap: 8px;
+        }
+
+        .glide__bullet {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #ccc;
+            border: none;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .glide__bullet:focus {
+            outline: none;
+        }
+
+        .glide__bullet:hover {
+            background: #666;
+        }
+
+        .glide__bullet.glide__bullet--active {
+            background: #000;
+        }
+        .contact-card h4 {
+            white-space: nowrap;
+        }
+    </style>
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "RealEstateAgent",
+            "name": "Vinhomes Green Paradise Cần Giờ",
+            "image": "{{asset('assets/images/logo.png')}}",
+            "url": "{{url('')}}",
+            "telephone": "{{settings('phone')}}",
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Xã Long Hòa, Thị trấn Cần Thạnh",
+                "addressLocality": "Cần Giờ",
+                "addressRegion": "TP.HCM",
+                "postalCode": "700000",
+                "addressCountry": "VN"
+            },
+            "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": 10.5833,
+                "longitude": 106.719
+            },
+            "openingHoursSpecification": {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+                "opens": "08:00",
+                "closes": "19:00"
+            },
+            "priceRange": "5 tỷ - 100 tỷ VNĐ"
+        }
+    </script>
+@endsection
+
+@section('page')
+    
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-video">
+            <div class="hero-overlay"></div>
+            <img src="{{asset('assets/images/photo-1559827260-dc66d52bef19.jpeg')}}" alt="Green Paradise">
+        </div>
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">
+                    <span class="text-gradient">GREEN PARADISE</span>
+                </h1>
+                <h2 class="hero-subtitle">SIÊU ĐÔ THỊ BIỂN CẦN GIỜ</h2>
+                <p class="hero-description">
+                    Siêu đô thị ESG đầu tiên Việt Nam • 2.870 hecta • Vốn đầu tư 10 tỷ USD<br>
+                    Kiến tạo chuẩn sống mới cho 230.000 cư dân
+                </p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary">Khám Phá Ngay</button>
+                    <button class="btn btn-secondary">Tải Brochure</button>
+                </div>
+            </div>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <div class="stat-number" data-count="2870">0</div>
+                    <div class="stat-label">Hecta</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-count="13">0</div>
+                    <div class="stat-label">Km Bờ Biển</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-count="108">0</div>
+                    <div class="stat-label">Tầng Tháp</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-count="10">0</div>
+                    <div class="stat-label">Tỷ USD</div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">TỔNG QUAN DỰ ÁN</h2>
+                <p class="section-subtitle">Siêu Đô Thị ESG Hàng Đầu Thế Giới</p>
+            </div>
+            <div class="about-grid">
+                <div class="about-content">
+                    <h3>Thiên Đường Nghỉ Dưỡng Đẳng Cấp Thế Giới</h3>
+                    <p>Green Paradise Cần Giờ là siêu đô thị lấn biển đầu tiên tại Việt Nam, được phát triển dựa trên ba trụ cột: <strong>Xanh – Thông minh – Sinh thái</strong>. Với tổng vốn đầu tư lên tới 10 tỷ USD, dự án hứa hẹn trở thành "Thành phố" Du lịch – Giải trí – Dịch vụ – Nghỉ dưỡng & Trung tâm kinh tế – tài chính ven biển TP.HCM.</p>
+                    <div class="about-features">
+                        <div class="feature-item">
+                            <i class="fas fa-leaf"></i>
+                            <span>Đô Thị Xanh ESG</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-brain"></i>
+                            <span>Công Nghệ AI-IoT</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-globe"></i>
+                            <span>Tiêu Chuẩn Quốc Tế</span>
+                        </div>
+                    </div>
+                    <button class="btn btn-outline">Tìm Hiểu Thêm</button>
+                </div>
+                <div class="about-image">
+                    <img src="{{asset('assets/images/photo-1600596542815-ffad4c1539a9.jpeg')}}" alt="Green Paradise Overview">
+                    <div class="image-overlay">
+                        <i class="fas fa-play-circle"></i>
+                        <span>Xem Video Giới Thiệu</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location Section -->
+    <section id="location" class="location">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">VỊ TRÍ VÀNG</h2>
+                <p class="section-subtitle">Cửa Ngõ Biển Duy Nhất Của TP.HCM</p>
+            </div>
+            <div class="location-content">
+                <div class="location-map">
+                    <img src="{{asset('assets/images/photo-1524813686514-a57563d77965.jpeg')}}" alt="Location Map">
+                    <div class="location-markers">
+                        <div class="marker" style="top: 30%; left: 50%;">
+                            <div class="marker-dot"></div>
+                            <div class="marker-label">Green Paradise</div>
+                        </div>
+                        <div class="marker" style="top: 60%; left: 30%;">
+                            <div class="marker-dot"></div>
+                            <div class="marker-label">TP.HCM - 50km</div>
+                        </div>
+                        <div class="marker" style="top: 45%; left: 70%;">
+                            <div class="marker-dot"></div>
+                            <div class="marker-label">Sân Bay Long Thành</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="location-info">
+                    <div class="info-card">
+                        <i class="fas fa-road"></i>
+                        <h4>Kết Nối Hoàn Hảo</h4>
+                        <p>Metro tốc độ cao 350km/h, Cầu Cần Giờ, Cao tốc Bến Lức - Long Thành</p>
+                    </div>
+                    <div class="info-card">
+                        <i class="fas fa-plane"></i>
+                        <h4>25 Phút Đến Sân Bay</h4>
+                        <p>Kết nối nhanh chóng với Sân bay quốc tế Long Thành</p>
+                    </div>
+                    <div class="info-card">
+                        <i class="fas fa-water"></i>
+                        <h4>3 Mặt Giáp Biển</h4>
+                        <p>Vị trí độc nhất với 13km bờ biển tuyệt đẹp</p>
+                    </div>
+                    <div class="info-card">
+                        <i class="fas fa-tree"></i>
+                        <h4>Rừng UNESCO 75.000ha</h4>
+                        <p>Khu dự trữ sinh quyển thế giới được UNESCO công nhận</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Utilities Section -->
+    <section id="utilities" class="utilities">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">TIỆN ÍCH ĐẲNG CẤP</h2>
+                <p class="section-subtitle">Hệ Sinh Thái All-in-One Độc Nhất Việt Nam</p>
+            </div>
+            <div class="utilities-grid">
+                <div class="utility-card">
+                    <div class="utility-icon">
+                        <i class="fas fa-golf-ball"></i>
+                    </div>
+                    <h3>Sân Golf 36 Lỗ</h3>
+                    <p>Thiết kế bởi Tiger Woods & Robert Trent Jones II</p>
+                    <span class="utility-tag">Đẳng Cấp Thế Giới</span>
+                </div>
+                <div class="utility-card featured">
+                    <div class="utility-icon">
+                        <i class="fas fa-water"></i>
+                    </div>
+                    <h3>Paradise Lagoon 443ha</h3>
+                    <p>Biển hồ nhân tạo lớn nhất thế giới</p>
+                    <span class="utility-tag">Kỷ Lục Guinness</span>
+                </div>
+                <div class="utility-card">
+                    <div class="utility-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <h3>Tòa Tháp 108 Tầng</h3>
+                    <p>Top 10 tòa nhà cao nhất thế giới</p>
+                    <span class="utility-tag">Biểu Tượng Mới</span>
+                </div>
+                <div class="utility-card">
+                    <div class="utility-icon">
+                        <i class="fas fa-ship"></i>
+                    </div>
+                    <h3>Marina 5 Sao</h3>
+                    <p>Cảng du thuyền quốc tế cao cấp</p>
+                    <span class="utility-tag">Ultra Luxury</span>
+                </div>
+                <div class="utility-card">
+                    <div class="utility-icon">
+                        <i class="fas fa-hospital"></i>
+                    </div>
+                    <h3>Cleveland Clinic</h3>
+                    <p>Bệnh viện số 1 nước Mỹ</p>
+                    <span class="utility-tag">Y Tế Quốc Tế</span>
+                </div>
+                <div class="utility-card">
+                    <div class="utility-icon">
+                        <i class="fas fa-theater-masks"></i>
+                    </div>
+                    <h3>Blue Wave Theatre</h3>
+                    <p>Nhà hát 5.000 chỗ ngồi</p>
+                    <span class="utility-tag">Nghệ Thuật</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery">
+        <div class="container-fluid">
+            <div class="section-header">
+                <h2 class="section-title">HÌNH ẢNH THỰC TẾ</h2>
+                <p class="section-subtitle">Khám Phá Vẻ Đẹp Green Paradise</p>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item large">
+                    <img src="{{asset('assets/images/photo-1570168007204-dfb528c6958f.jpeg')}}" alt="Paradise View">
+                    <div class="gallery-overlay">
+                        <h4>Toàn Cảnh Dự Án</h4>
+                        <p>View từ trên cao</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="{{asset('assets/images/photo-1580587771525-78b9dba3b914.jpeg')}}" alt="Villa">
+                    <div class="gallery-overlay">
+                        <h4>Biệt Thự Biển</h4>
+                        <p>Kiến trúc sang trọng</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="{{asset('assets/images/photo-1506929562872-bb421503ef21.jpeg')}}" alt="Beach">
+                    <div class="gallery-overlay">
+                        <h4>Bãi Biển Riêng</h4>
+                        <p>13km bờ biển</p>
+                    </div>
+                </div>
+                <div class="gallery-item tall">
+                    <img src="{{asset('assets/images/photo-1545324418-cc1a3fa10c00.jpeg')}}" alt="Tower">
+                    <div class="gallery-overlay">
+                        <h4>Tháp 108 Tầng</h4>
+                        <p>Biểu tượng mới</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="{{asset('assets/images/photo-1587381420270-3e1a5b9e6904.jpeg')}}" alt="Golf">
+                    <div class="gallery-overlay">
+                        <h4>Sân Golf</h4>
+                        <p>Đẳng cấp quốc tế</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="{{asset('assets/images/photo-1571896349842-33c89424de2d.jpeg')}}" alt="Resort">
+                    <div class="gallery-overlay">
+                        <h4>Resort 5 Sao</h4>
+                        <p>Nghỉ dưỡng cao cấp</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- News Section -->
+    <section id="news" class="news">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">TIN TỨC & SỰ KIỆN</h2>
+                <p class="section-subtitle">Cập Nhật Mới Nhất Về Dự Án</p>
+            </div>
+            <div class="news-grid">
+                @foreach($posts as $post)
+                @break($loop->index >= 3)
+                <article class="news-card">
+                    <div class="news-image">
+                        <img src="{{$post->getFirstMediaUrl('media')}}" alt="{{$post->title}}">
+                        <span class="news-date">{{$post->created_at->format('d/m/Y')}}</span>
+                    </div>
+                    <div class="news-content">
+                        <h3>{{$post->title}}</h3>
+                        <p>{{Str::words($post->excerpt, 25)}}</p>
+                        <a href="{{$post->showUrl()}}" class="read-more">Xem thêm →</a>
+                    </div>
+                </article>
+                @endforeach
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">ĐĂNG KÝ TƯ VẤN</h2>
+                <p class="section-subtitle">Nhận Thông Tin Ưu Đãi & Bảng Giá Mới Nhất</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Thông Tin Liên Hệ</h3>
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Văn Phòng Dự Án</h4>
+                            <p>Xã Long Hòa, Huyện Cần Giờ, TP.HCM</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Hotline 24/7</h4>
+                            <p>{{settings('phone')}}</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p>{{settings('contact_email')}}</p>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="{{settings('facebook')}}"><i class="fab fa-facebook"></i></a>
+                        <a href="{{settings('youtube')}}"><i class="fab fa-youtube"></i></a>
+                        <a href="{{settings('tiktok')}}"><i class="fab fa-tiktok"></i></a>
+                        {{-- <a href="#"><i class="fab fa-linkedin"></i></a> --}}
+                    </div>
+                </div>
+                <form class="contact-form">
+                    <div class="form-group">
+                        <input type="text" name="name" placeholder="Họ và tên *" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" name="phone" placeholder="Số điện thoại *" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="email" placeholder="Email">
+                    </div>
+                    <div class="form-group">
+                        <select name="product">
+                            <option>Chọn sản phẩm quan tâm</option>
+                            <option>Biệt thự biển</option>
+                            <option>Căn hộ cao cấp</option>
+                            <option>Shophouse</option>
+                            <option>Condotel</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <textarea placeholder="Lời nhắn" rows="4" name="message"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-full">
+                        Gửi Thông Tin
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+@endsection
+
+@section('js')
+    <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            new Glide('.glide', {
+                type: 'carousel',
+                perView: 2, // số item hiển thị
+                gap: 20, // khoảng cách giữa các item
+                autoplay: 3000, // tự động chạy (ms), bỏ nếu không muốn
+                hoverpause: true,
+                focusAt: 'center',
+                //  peek: { before: 300, after: 300 },
+                breakpoints: {
+                    1024: {
+                        perView: 2
+                    },
+                    768: {
+                        perView: 1
+                    }
+                }
+            }).mount();
+        });
+    </script>
+    <script>
+        $(function() {
+
+            $('.contact-form').on('submit', function(e) {
+                e.preventDefault();
+
+                $(this).find('button').prop('disabled', true);
+
+                var data = {
+                    name: $(this).find('input[name="name"]').val(),
+                    phone: $(this).find('input[name="phone"]').val(),
+                    email: $(this).find('input[name="email"]').val(),
+                    product: $(this).find('select[name="product"]').val(),
+                    message: $(this).find('textarea[name="message"]').val()
+                };
+
+                $.ajax({
+                    type: 'post',
+                    url: '{{ route('newsletters') }}',
+                    data: data,
+                }).then(function(res) {
+                    if (res.success) {
+                        toastr.success(
+                            'Cảm ơn bạn đã đăng ký! Chúng tôi sẽ liên hệ với bạn sớm nhất.');
+                        $('.contact-form')[0].reset();
+                    } else {
+                        toastr.error(res.msg);
+                    }
+                });
+                $(this).find('button').prop('disabled', false);
+            });
+        });
+        
+    </script>
+@endsection
