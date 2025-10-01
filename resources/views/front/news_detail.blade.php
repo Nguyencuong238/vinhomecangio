@@ -788,8 +788,8 @@
             "@context": "https://schema.org",
             "@type": "NewsArticle",
             "headline": "Chính Thức Ra Mắt Phân Khu The Haven Bay",
-            "datePublished": "2025-09-24T10:00:00+07:00",
-            "dateModified": "2025-09-24T10:30:00+07:00",
+            "datePublished": "{{$post->created_at->toIso8601String()}}",
+            "dateModified": "{{$post->updated_at->toIso8601String()}}",
             "author": {
                 "@type": "Person",
                 "name": "Nguyễn Văn Nam"
@@ -799,11 +799,11 @@
                 "name": "Vinhomes Green Paradise",
                 "logo": {
                 "@type": "ImageObject",
-                "url": "https://vinhomescangio.info/logo.png"
+                "url": "{{asset('assets/images/logo.png')}}"
                 }
             },
-            "image": "https://vinhomescangio.info/images/the-haven-bay.jpg",
-            "articleBody": "Vinhomes Green Paradise chính thức ra mắt..."
+            "image": "{{$post->getFirstMediaUrl('media')}}",
+            "articleBody": "{{Str::words($post->excerpt, 15)}}"
         }
     </script>
 @endsection

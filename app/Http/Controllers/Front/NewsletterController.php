@@ -22,11 +22,6 @@ class NewsletterController extends Controller
         return view('backend.newsletters.index', compact('newsletters'));
     }
 
-    public function create()
-    {
-        
-    }
-
     public function store(Request $request)
     {
         $validator = Validator::make($request->all(), [
@@ -48,7 +43,7 @@ class NewsletterController extends Controller
                 'msg' => $msg,
             ]);
         }
-        
+
         // if (! Newsletter::where('email', $request->email)->exists()) {
             Newsletter::create([
                 'name' => $request->name,
@@ -57,6 +52,7 @@ class NewsletterController extends Controller
                 'product' => $request->product,
                 'budget' => $request->budget,
                 'message' => $request->message,
+                'schedule' => $request->schedule,
             ]);
         //}
         return response()->json([
