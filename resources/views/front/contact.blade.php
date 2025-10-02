@@ -32,7 +32,7 @@
             "@type": "ContactPage",
             "mainEntity": {
                 "@type": "ContactPoint",
-                "telephone": "+84-963-728-586",
+                "telephone": "{{settings('phone')}}",
                 "contactType": "Sales",
                 "availableLanguage": ["Vietnamese", "English"],
                 "areaServed": "VN",

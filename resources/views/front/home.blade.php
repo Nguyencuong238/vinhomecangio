@@ -83,6 +83,9 @@
         .contact-card h4 {
             white-space: nowrap;
         }
+        .gallery-item img {
+            max-height: 520px;
+        }
     </style>
     <!-- Schema.org Structured Data -->
     <script type="application/ld+json">
@@ -123,21 +126,21 @@
     <section id="home" class="hero">
         <div class="hero-video">
             <div class="hero-overlay"></div>
-            <img src="{{asset('assets/images/photo-1559827260-dc66d52bef19.jpeg')}}" alt="Green Paradise">
+            <img src="{{asset('assets/images/vinhomes-green-paradise-tam-co-quoc-te.jpg')}}" alt="Green Paradise">
         </div>
         <div class="hero-content">
             <div class="hero-text">
                 <h1 class="hero-title">
-                    <span class="text-gradient">GREEN PARADISE</span>
+                    <span class="text-gradient text-transform-uppercase">Vinhomes Green Paradise</span>
                 </h1>
-                <h2 class="hero-subtitle">SIÊU ĐÔ THỊ BIỂN CẦN GIỜ</h2>
+                <h2 class="hero-subtitle text-transform-uppercase">Thiên Đường Xanh Bên Biển</h2>
                 <p class="hero-description">
                     Siêu đô thị ESG đầu tiên Việt Nam • 2.870 hecta • Vốn đầu tư 10 tỷ USD<br>
                     Kiến tạo chuẩn sống mới cho 230.000 cư dân
                 </p>
                 <div class="hero-buttons">
-                    <button class="btn btn-primary">Khám Phá Ngay</button>
-                    <button class="btn btn-secondary">Tải Brochure</button>
+                    <button class="btn btn-primary" onclick="window.location.href='{{route('contact')}}'">Khám Phá Ngay</button>
+                    <button class="btn btn-secondary" onclick="window.location.href='{{route('contact')}}'">Tải Brochure</button>
                 </div>
             </div>
             <div class="hero-stats">
@@ -211,42 +214,42 @@
             </div>
             <div class="location-content">
                 <div class="location-map">
-                    <img src="{{asset('assets/images/photo-1524813686514-a57563d77965.jpeg')}}" alt="Location Map">
+                    <img src="{{asset('assets/images/vi-tri-vinhomes-green-paradise.jpg')}}" alt="Vị trí vàng Vinhomes Green Paradise">
                     <div class="location-markers">
-                        <div class="marker" style="top: 30%; left: 50%;">
+                        <div class="marker" style="top: 49%; left: 72%;">
                             <div class="marker-dot"></div>
                             <div class="marker-label">Green Paradise</div>
                         </div>
-                        <div class="marker" style="top: 60%; left: 30%;">
+                        {{-- <div class="marker" style="top: 60%; left: 30%;">
                             <div class="marker-dot"></div>
                             <div class="marker-label">TP.HCM - 50km</div>
                         </div>
                         <div class="marker" style="top: 45%; left: 70%;">
                             <div class="marker-dot"></div>
                             <div class="marker-label">Sân Bay Long Thành</div>
-                        </div>
+                        </div> --}}
                     </div>
                 </div>
                 <div class="location-info">
                     <div class="info-card">
-                        <i class="fas fa-road"></i>
-                        <h4>Kết Nối Hoàn Hảo</h4>
-                        <p>Metro tốc độ cao 350km/h, Cầu Cần Giờ, Cao tốc Bến Lức - Long Thành</p>
+                        <i class="fas fa-subway"></i>
+                        <h4>Metro Tốc Độ Cao</h4>
+                        <p>12 phút đến Quận 7 với vận tốc 350km/h</p>
+                    </div>
+                    <div class="info-card">
+                        <i class="fas fa-bridge"></i>
+                        <h4>Cầu Cần Giờ 7.3km</h4>
+                        <p>25 phút về trung tâm TP.HCM</p>
                     </div>
                     <div class="info-card">
                         <i class="fas fa-plane"></i>
-                        <h4>25 Phút Đến Sân Bay</h4>
-                        <p>Kết nối nhanh chóng với Sân bay quốc tế Long Thành</p>
+                        <h4>Sân Bay Long Thành</h4>
+                        <p>45km - 25 phút qua cao tốc</p>
                     </div>
                     <div class="info-card">
-                        <i class="fas fa-water"></i>
-                        <h4>3 Mặt Giáp Biển</h4>
-                        <p>Vị trí độc nhất với 13km bờ biển tuyệt đẹp</p>
-                    </div>
-                    <div class="info-card">
-                        <i class="fas fa-tree"></i>
-                        <h4>Rừng UNESCO 75.000ha</h4>
-                        <p>Khu dự trữ sinh quyển thế giới được UNESCO công nhận</p>
+                        <i class="fas fa-ship"></i>
+                        <h4>Cảng Quốc Tế Cần Giờ</h4>
+                        <p>100 triệu tấn hàng/năm</p>
                     </div>
                 </div>
             </div>
@@ -320,7 +323,47 @@
                 <h2 class="section-title">HÌNH ẢNH THỰC TẾ</h2>
                 <p class="section-subtitle">Khám Phá Vẻ Đẹp Green Paradise</p>
             </div>
-            <div class="gallery-grid">
+            <div class="glide gallerycontainer">
+                <div class="glide__track" data-glide-el="track">
+                    <ul class="glide__slides">
+                        @for ($i = 1; $i <= 5; $i++)
+                        <li class="glide__slide gallery-item">
+                            <img src="assets/images/tien-ich-toan-cau-vinhomes-green-paradise-{{ $i }}.jpg" alt="tien-ich-toan-cau-vinhomes-green-paradise-{{ $i }}">
+                            {{-- <div class="gallery-info">
+                                <h4>Toàn Cảnh Dự Án</h4>
+                            </div> --}}
+                        </li>
+                        @endfor
+
+                        @for ($i = 1; $i <= 8; $i++)
+                            <li class="glide__slide gallery-item">
+                                <img src="assets/images/tien-ich-vinhomes-green-paradise-{{ $i }}.jpg"
+                                    alt="tien-ich-vinhomes-green-paradise-{{ $i }}">
+                                {{-- <div class="gallery-info">
+                                    <h4>Phân Khu A - Vịnh Tiên</h4>
+                                </div> --}}
+                            </li>
+                            
+                        @endfor
+                        
+                    </ul>
+                </div>
+
+                <!-- Nút điều khiển -->
+                <div class="glide__arrows" data-glide-el="controls">
+                    <button class="glide__arrow glide__arrow--left" data-glide-dir="<">‹</button>
+                    <button class="glide__arrow glide__arrow--right" data-glide-dir=">">›</button>
+                </div>
+                <!-- Dấu chấm (bullets) -->
+                <div class="glide__bullets" data-glide-el="controls[nav]">
+
+                    @for ($i = 0; $i < 13; $i++)
+                    <button class="glide__bullet" data-glide-dir="={{$i}}"></button>
+                    
+                    @endfor
+                </div>
+            </div>
+            {{-- <div class="gallery-grid glide">
                 <div class="gallery-item large">
                     <img src="{{asset('assets/images/photo-1570168007204-dfb528c6958f.jpeg')}}" alt="Paradise View">
                     <div class="gallery-overlay">
@@ -363,7 +406,7 @@
                         <p>Nghỉ dưỡng cao cấp</p>
                     </div>
                 </div>
-            </div>
+            </div> --}}
         </div>
     </section>
 
@@ -407,7 +450,7 @@
                         <i class="fas fa-map-marker-alt"></i>
                         <div>
                             <h4>Văn Phòng Dự Án</h4>
-                            <p>Xã Long Hòa, Huyện Cần Giờ, TP.HCM</p>
+                            <p>Tòa nhà T4-51, PhốManhattan, Khu đô thị Vinhomes Grand Park, TP. Thủ Đức , HCM</p>
                         </div>
                     </div>
                     <div class="info-item">
@@ -428,7 +471,6 @@
                         <a href="{{settings('facebook')}}"><i class="fab fa-facebook"></i></a>
                         <a href="{{settings('youtube')}}"><i class="fab fa-youtube"></i></a>
                         <a href="{{settings('tiktok')}}"><i class="fab fa-tiktok"></i></a>
-                        {{-- <a href="#"><i class="fab fa-linkedin"></i></a> --}}
                     </div>
                 </div>
                 <form class="contact-form">

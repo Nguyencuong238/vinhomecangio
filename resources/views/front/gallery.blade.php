@@ -283,7 +283,7 @@
                     </div>
                     
                     <div class="gallery-item" data-category="utilities">
-                        <img src="{{asset('assets/images/photo-1587381420270-3e1a5b9e6904.jpeg')}}" alt="Sân golf">
+                        <img src="{{asset('assets/images/sieu-do-thi-esg-vinhomes-green-paradise.jpg')}}" alt="Sân golf">
                         <div class="gallery-overlay">
                             <h4 style="color: #fff; margin-bottom: 5px;">Sân Golf Championship</h4>
                             <p style="color: rgba(255,255,255,0.9); font-size: 14px; margin: 0;">36 lỗ Tiger Woods Design</p>
@@ -299,7 +299,7 @@
                     </div>
                     
                     <div class="gallery-item" data-category="utilities">
-                        <img src="{{asset('assets/images/photo-1559827260-dc66d52bef19.jpeg')}}" alt="Paradise Lagoon">
+                        <img src="{{asset('assets/images/paradise-lagoon-bien-ho-nhan-tao.jpg')}}" alt="Paradise Lagoon">
                         <div class="gallery-overlay">
                             <h4 style="color: #fff; margin-bottom: 5px;">Paradise Lagoon</h4>
                             <p style="color: rgba(255,255,255,0.9); font-size: 14px; margin: 0;">Biển hồ 443ha</p>

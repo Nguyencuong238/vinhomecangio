@@ -226,7 +226,7 @@
                         </div>
                     </div>
                     <div class="advantages-image">
-                        <img src="{{ asset('assets/images/photo-1590846406792-0adc7f938f1d.jpeg') }}"
+                        <img src="{{ asset('assets/images/vi-tri-vinhomes-green-paradise.jpg') }}"
                             alt="Strategic Location"
                             style="width: 100%; border-radius: 20px; box-shadow: var(--shadow-xl);">
                     </div>
@@ -266,7 +266,7 @@
                     <div class="tab-content">
                         <div id="road" class="transport-content" style="display: block;">
                             <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center;">
-                                <img src="{{ asset('assets/images/photo-1515162816999-a0c47dc192f7.jpeg') }}"
+                                <img src="{{ asset('assets/images/tiem-nang-bat-dong-san-vinhomes-green-paradise.jpg') }}"
                                     alt="Highway" style="width: 100%; border-radius: 15px;">
                                 <div>
                                     <h3 style="color: var(--primary-color); margin-bottom: 20px;">Hệ Thống Đường Bộ Hiện
@@ -294,7 +294,7 @@
 
                         <div id="metro" class="transport-content" style="display: none;">
                             <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center;">
-                                <img src="{{ asset('assets/images/photo-1555149385-c50f336e28b0.jpeg') }}" alt="Metro"
+                                <img src="{{ asset('assets/images/duong-sat-toc-do-cao-bac-nam.jpg') }}" alt="Metro"
                                     style="width: 100%; border-radius: 15px;">
                                 <div>
                                     <h3 style="color: var(--primary-color); margin-bottom: 20px;">Metro Tốc Độ Cao</h3>
@@ -321,7 +321,7 @@
 
                         <div id="water" class="transport-content" style="display: none;">
                             <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center;">
-                                <img src="{{ asset('assets/images/photo-1540946485063-a40da27545f8.jpeg') }}"
+                                <img src="{{ asset('assets/images/giao-thong-duong-thuy-vinhomes-can-gio.jpg') }}"
                                     alt="Marina" style="width: 100%; border-radius: 15px;">
                                 <div>
                                     <h3 style="color: var(--primary-color); margin-bottom: 20px;">Giao Thông Đường Thủy
@@ -349,7 +349,7 @@
 
                         <div id="air" class="transport-content" style="display: none;">
                             <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center;">
-                                <img src="{{ asset('assets/images/photo-1474302770737-173ee21bab63.jpeg') }}"
+                                <img src="{{ asset('assets/images/san-bay-long-thanh.jpeg') }}"
                                     alt="Heliport" style="width: 100%; border-radius: 15px;">
                                 <div>
                                     <h3 style="color: var(--primary-color); margin-bottom: 20px;">Kết Nối Hàng Không</h3>
@@ -389,7 +389,7 @@
                     style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px;">
                     <div class="landmark-card"
                         style="background: #fff; border-radius: 15px; overflow: hidden; box-shadow: var(--shadow-sm); transition: var(--transition);">
-                        <img src="{{ asset('assets/images/photo-1596394516093-501ba68a0ba6.jpeg') }}"
+                        <img src="{{ asset('assets/images/san-bay-long-thanh.jpeg') }}"
                             alt="Long Thanh Airport" style="width: 100%; height: 200px; object-fit: cover;">
                         <div style="padding: 25px;">
                             <h4 style="margin-bottom: 10px;">Sân Bay Quốc Tế Long Thành</h4>
@@ -403,7 +403,7 @@
                     </div>
                     <div class="landmark-card"
                         style="background: #fff; border-radius: 15px; overflow: hidden; box-shadow: var(--shadow-sm); transition: var(--transition);">
-                        <img src="{{ asset('assets/images/photo-1449157291145-7efd050a4d0e.jpeg') }}" alt="Vung Tau"
+                        <img src="{{ asset('assets/images/thanh-pho-vung-tau.jpg') }}" alt="Vung Tau"
                             style="width: 100%; height: 200px; object-fit: cover;">
                         <div style="padding: 25px;">
                             <h4 style="margin-bottom: 10px;">Thành Phố Vũng Tàu</h4>
@@ -417,7 +417,7 @@
                     </div>
                     <div class="landmark-card"
                         style="background: #fff; border-radius: 15px; overflow: hidden; box-shadow: var(--shadow-sm); transition: var(--transition);">
-                        <img src="{{ asset('assets/images/photo-1509023464722-18d996393ca8.jpeg') }}" alt="District 1"
+                        <img src="{{ asset('assets/images/quan-1-thanh-pho-ho-chi-minh.jpg') }}" alt="Quận 1"
                             style="width: 100%; height: 200px; object-fit: cover;">
                         <div style="padding: 25px;">
                             <h4 style="margin-bottom: 10px;">Quận 1 - Trung Tâm TP.HCM</h4>
@@ -431,7 +431,7 @@
                     </div>
                     <div class="landmark-card"
                         style="background: #fff; border-radius: 15px; overflow: hidden; box-shadow: var(--shadow-sm); transition: var(--transition);">
-                        <img src="{{ asset('assets/images/photo-1565967511849-76a60a516170.jpeg') }}" alt="UNESCO Forest"
+                        <img src="{{ asset('assets/images/rung-ngap-man.jpg') }}" alt="UNESCO Forest"
                             style="width: 100%; height: 200px; object-fit: cover;">
                         <div style="padding: 25px;">
                             <h4 style="margin-bottom: 10px;">Rừng Ngập Mặn UNESCO</h4>
@@ -445,7 +445,7 @@
                     </div>
                     <div class="landmark-card"
                         style="background: #fff; border-radius: 15px; overflow: hidden; box-shadow: var(--shadow-sm); transition: var(--transition);">
-                        <img src="{{ asset('assets/images/photo-1582735689369-4fe89db7114c.jpeg') }}"
+                        <img src="{{ asset('assets/images/cang-hiep-phuoc.webp') }}"
                             alt="Hiep Phuoc Port" style="width: 100%; height: 200px; object-fit: cover;">
                         <div style="padding: 25px;">
                             <h4 style="margin-bottom: 10px;">Cảng Hiệp Phước</h4>
@@ -459,7 +459,7 @@
                     </div>
                     <div class="landmark-card"
                         style="background: #fff; border-radius: 15px; overflow: hidden; box-shadow: var(--shadow-sm); transition: var(--transition);">
-                        <img src="{{ asset('assets/images/photo-1555992336-03a23c7b20ee.jpeg') }}" alt="District 7"
+                        <img src="{{ asset('assets/images/phu-my-hung.jpg') }}" alt="District 7"
                             style="width: 100%; height: 200px; object-fit: cover;">
                         <div style="padding: 25px;">
                             <h4 style="margin-bottom: 10px;">Phú Mỹ Hưng - Quận 7</h4>

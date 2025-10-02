@@ -138,7 +138,7 @@
                 <div class="feature-showcase"
                     style="display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; margin-bottom: 80px;">
                     <div class="feature-image">
-                        <img src="{{ asset('assets/images/photo-1559827260-dc66d52bef19.jpeg') }}" alt="Paradise Lagoon"
+                        <img src="{{ asset('assets/images/paradise-lagoon-bien-ho-nhan-tao.jpg') }}" alt="Paradise Lagoon"
                             style="width: 100%; border-radius: 20px; box-shadow: var(--shadow-xl);">
                     </div>
                     <div class="feature-content">
@@ -193,7 +193,7 @@
                         </ul>
                     </div>
                     <div class="feature-image">
-                        <img src="{{ asset('assets/images/photo-1587174486073-ae5e5cff23aa.jpeg') }}" alt="Golf Course"
+                        <img src="{{ asset('assets/images/sieu-do-thi-esg-vinhomes-green-paradise.jpg') }}" alt="Golf Course"
                             style="width: 100%; border-radius: 20px; box-shadow: var(--shadow-xl);">
                     </div>
                 </div>
@@ -202,7 +202,7 @@
                 <div class="feature-showcase"
                     style="display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center;">
                     <div class="feature-image">
-                        <img src="{{ asset('assets/images/photo-1545324418-cc1a3fa10c00.jpeg') }}" alt="108 Tower"
+                        <img src="{{ asset('assets/images/thap-108-tang-vinhomes-can-gio.webp') }}" alt="108 Tower"
                             style="width: 100%; border-radius: 20px; box-shadow: var(--shadow-xl);">
                     </div>
                     <div class="feature-content">

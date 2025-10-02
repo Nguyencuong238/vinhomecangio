@@ -130,7 +130,7 @@
                         </div>
                     </div>
                     <div class="overview-image">
-                        <img src="{{ asset('assets/images/photo-1613490493576-7fde63acd811.jpeg') }}"
+                        <img src="{{ asset('assets/images/vinhomes-green-paradise-kinh-te-su-kien.jpg') }}"
                             alt="Green Paradise Overview"
                             style="width: 100%; border-radius: 20px; box-shadow: var(--shadow-lg);">
                     </div>

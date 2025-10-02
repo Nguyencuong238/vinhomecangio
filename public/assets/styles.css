@@ -825,7 +825,7 @@ p {
 
 /* === Gallery Section === */
 .gallery {
-    padding: 100px 0;
+    padding: 80px 0;
     background: #fff;
 }
 
@@ -1013,7 +1013,7 @@ p {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 60px;
-    max-width: 1000px;
+    /* max-width: 1000px; */
     margin: 0 auto;
 }
 
