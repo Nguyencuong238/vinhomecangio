@@ -259,7 +259,7 @@
                 <!-- Gallery Grid -->
                 <div class="gallery-container">
                     <div class="gallery-item" data-category="overview">
-                        <img src="{{asset('assets/images/photo-1570168007204-dfb528c6958f.jpeg')}}" alt="Toàn cảnh dự án">
+                        <img src="{{asset('assets/images/vinhomes-green-paradise-so-sanh-quoc-te.jpg')}}" alt="Toàn cảnh dự án">
                         <div class="gallery-overlay">
                             <h4 style="color: #fff; margin-bottom: 5px;">Toàn Cảnh Green Paradise</h4>
                             <p style="color: rgba(255,255,255,0.9); font-size: 14px; margin: 0;">View từ trên cao</p>
@@ -267,7 +267,7 @@
                     </div>
                     
                     <div class="gallery-item" data-category="villa">
-                        <img src="{{asset('assets/images/photo-1580587771525-78b9dba3b914.jpeg')}}" alt="Biệt thự biển">
+                        <img src="{{asset('assets/images/biet-thu-bien-mat-bien.jpg')}}" alt="Biệt thự biển">
                         <div class="gallery-overlay">
                             <h4 style="color: #fff; margin-bottom: 5px;">Biệt Thự Mặt Biển</h4>
                             <p style="color: rgba(255,255,255,0.9); font-size: 14px; margin: 0;">Kiến trúc hiện đại</p>
@@ -275,7 +275,7 @@
                     </div>
                     
                     <div class="gallery-item" data-category="apartment">
-                        <img src="{{asset('assets/images/photo-1545324418-cc1a3fa10c00.jpeg')}}" alt="Căn hộ cao cấp">
+                        <img src="{{asset('assets/images/can-ho-vinhomes.jpg')}}" alt="Căn hộ cao cấp">
                         <div class="gallery-overlay">
                             <h4 style="color: #fff; margin-bottom: 5px;">Căn Hộ Sky View</h4>
                             <p style="color: rgba(255,255,255,0.9); font-size: 14px; margin: 0;">Tòa tháp 108 tầng</p>
@@ -307,7 +307,7 @@
                     </div>
                     
                     <div class="gallery-item" data-category="villa">
-                        <img src="{{asset('assets/images/photo-1613490493576-7fde63acd811.jpeg')}}" alt="Villa pool">
+                        <img src="{{asset('assets/images/villa-pool.jpg')}}" alt="Villa pool">
                         <div class="gallery-overlay">
                             <h4 style="color: #fff; margin-bottom: 5px;">Villa Pool</h4>
                             <p style="color: rgba(255,255,255,0.9); font-size: 14px; margin: 0;">Biệt thự có hồ bơi riêng</p>
@@ -315,7 +315,7 @@
                     </div>
                     
                     <div class="gallery-item" data-category="overview">
-                        <img src="{{asset('assets/images/photo-1486406146926-c627a92ad1ab.jpeg')}}" alt="Skyline">
+                        <img src="{{asset('assets/images/skyline-green-paradise.jpeg')}}" alt="Skyline">
                         <div class="gallery-overlay">
                             <h4 style="color: #fff; margin-bottom: 5px;">Skyline Green Paradise</h4>
                             <p style="color: rgba(255,255,255,0.9); font-size: 14px; margin: 0;">View ban đêm</p>
@@ -323,7 +323,7 @@
                     </div>
                     
                     <div class="gallery-item" data-category="utilities">
-                        <img src="{{asset('assets/images/photo-1540946485063-a40da27545f8.jpeg')}}" alt="Marina">
+                        <img src="{{asset('assets/images/cang-du-thuyen.jpg')}}" alt="Marina">
                         <div class="gallery-overlay">
                             <h4 style="color: #fff; margin-bottom: 5px;">Marina International</h4>
                             <p style="color: rgba(255,255,255,0.9); font-size: 14px; margin: 0;">Cảng du thuyền 5 sao</p>
