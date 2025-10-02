@@ -195,7 +195,7 @@
                     <button class="btn btn-outline">Tìm Hiểu Thêm</button>
                 </div>
                 <div class="about-image">
-                    <img src="{{asset('assets/images/photo-1600596542815-ffad4c1539a9.jpeg')}}" alt="Green Paradise Overview">
+                    <img src="{{asset('assets/images/tien-ich-vinhomes-green-paradise-11.jpg')}}" alt="Green Paradise Overview">
                     <div class="image-overlay">
                         <i class="fas fa-play-circle"></i>
                         <span>Xem Video Giới Thiệu</span>
