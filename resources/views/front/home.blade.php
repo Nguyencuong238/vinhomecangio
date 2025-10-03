@@ -86,6 +86,106 @@
         .gallery-item img {
             max-height: 520px;
         }
+        h1.hero-title .text-gradient {
+            background: linear-gradient(135deg, #48fbd5 0%, #02e7b6 100%);
+            background-clip: text;
+            -webkit-background-clip: text;
+        }
+        #subdivisions {
+            background: linear-gradient(180deg, #f8f9fa 0%, #fff 100%);
+            padding: 100px 0;
+        }
+        .subdivisions-grid {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 30px
+}
+
+.subdivision-card {
+    background: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.subdivision-card.animate {
+    opacity: 1;
+    transform: translateY(0);
+    animation: fadeInUp 0.6s ease forwards
+}
+
+.subdivision-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+}
+
+.subdivision-image {
+    position: relative;
+    overflow: hidden
+}
+
+.subdivision-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.subdivision-card:hover .subdivision-image img {
+    transform: scale(1.1)
+}
+
+.subdivision-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top,rgb(0 0 0 / .8) 0%,transparent 100%);
+    padding: 30px 20px 20px
+}
+
+.subdivision-overlay h3 {
+    color: #fff;
+    font-size: 24px
+}
+
+.subdivision-info {
+    padding: 30px
+}
+
+.subdivision-info h4 {
+    color: var(--primary);
+    margin-bottom: 15px
+}
+
+.subdivision-info p {
+    color: var(--gray-600);
+    margin-bottom: 20px;
+    line-height: 1.7
+}
+
+.subdivision-info ul {
+    list-style: none
+}
+
+.subdivision-info li {
+    color: var(--gray-700);
+    padding: 8px 0;
+    border-bottom: 1px solid var(--gray-200)
+}
+
+.subdivision-info li:last-child {
+    border: none
+}
+
+.subdivision-info li:before {
+    content: "→";
+    color: var(--primary);
+    margin-right: 10px
+}
     </style>
     <!-- Schema.org Structured Data -->
     <script type="application/ld+json">
@@ -196,10 +296,10 @@
                 </div>
                 <div class="about-image">
                     <img src="{{asset('assets/images/tien-ich-vinhomes-green-paradise-11.jpg')}}" alt="Green Paradise Overview">
-                    <div class="image-overlay">
+                    {{-- <div class="image-overlay">
                         <i class="fas fa-play-circle"></i>
                         <span>Xem Video Giới Thiệu</span>
-                    </div>
+                    </div> --}}
                 </div>
             </div>
         </div>
@@ -311,6 +411,98 @@
                     <h3>Blue Wave Theatre</h3>
                     <p>Nhà hát 5.000 chỗ ngồi</p>
                     <span class="utility-tag">Nghệ Thuật</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Subdivisions Section -->
+    <section id="subdivisions" class="subdivisions">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">PHÂN KHU DỰ ÁN</h2>
+                <p class="section-subtitle">4 Phân Khu Đặc Sắc Độc Đáo</p>
+            </div>
+
+            <div class="subdivisions-grid">
+                <div class="subdivision-card animate">
+                    <div class="subdivision-image">
+                        <img src="https://vinhomesgreenparadise.net/assets/images/the-haven-bay-vinh-tien.jpg" alt="The Haven Bay">
+                        <div class="subdivision-overlay">
+                            <h3>Phân khu A</h3>
+                        </div>
+                    </div>
+                    <div class="subdivision-info">
+                        <h4>The Haven Bay - Vịnh Tiên</h4>
+                        <p>Điểm khởi đầu của hành trình sống xanh, nơi nghỉ dưỡng và giải trí giao hòa cùng thiên nhiên.</p>
+                        <ul>
+                            <li><strong>Quy mô:</strong> 953 ha</li>
+                            <li><strong>Chức năng:</strong> Cửa ngõ của đại đô thị, khu ở <strong>sinh thái &amp; du
+                                    lịch</strong>.</li>
+                            <li><strong>Tiện ích nổi bật:</strong> Hội nghị, sân golf, biệt thự nghỉ dưỡng, khách sạn mini.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="subdivision-card animate">
+                    <div class="subdivision-image">
+                        <img src="https://vinhomesgreenparadise.net/assets/images/the-greean-bay-vinh-ngoc.jpg" alt="The Green Bay">
+                        <div class="subdivision-overlay">
+                            <h3>Phân khu B</h3>
+                        </div>
+                    </div>
+                    <div class="subdivision-info">
+                        <h4>The Green Bay - Vịnh Ngọc</h4>
+                        <p><strong>Trái tim sôi động của đại đô thị</strong>, nơi hội tụ thương mại, y tế, thể thao và nghỉ
+                            dưỡng cao cấp.</p>
+                        <ul>
+                            <li><strong>Quy mô:</strong> 660 ha</li>
+                            <li><strong>Chức năng:</strong> Trung tâm thương mại – văn hóa – giải trí – y tế quốc tế.</li>
+                            <li><strong>Tiện ích nổi bật:</strong> Sân vận động hiện đại, trung tâm thương mại, bệnh viện
+                                quốc tế, khu du lịch &amp; nghỉ dưỡng.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="subdivision-card animate">
+                    <div class="subdivision-image">
+                        <img src="https://vinhomesgreenparadise.net/assets/images/the-paradise-mui-danh-vong.jpg" alt="The Paradise">
+                        <div class="subdivision-overlay">
+                            <h3>Phân khu C</h3>
+                        </div>
+                    </div>
+                    <div class="subdivision-info">
+                        <h4>The Paradise - Mũi Danh Vọng</h4>
+                        <div><strong>Biểu tượng phồn vinh của đại đô thị</strong>, nơi định hình đường chân trời mới với những
+                            công trình mang tầm vóc toàn cầu.</div>
+                        <ul>
+                            <li><strong>Quy mô:</strong> 318 ha</li>
+                            <li><strong>Chức năng:</strong> Trung tâm tài chính – thương mại – dịch vụ &amp; bến cảng.</li>
+                            <li><strong>Tiện ích nổi bật:</strong> Tòa tháp 108 tầng, bến tàu quốc tế, cao ốc văn phòng,
+                                trung tâm thương mại biểu tượng.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="subdivision-card animate">
+                    <div class="subdivision-image">
+                        <img src="https://vinhomesgreenparadise.net/assets/images/the-grand-island-dao-mat-troi.jpg" alt="The Grand Island">
+                        <div class="subdivision-overlay">
+                            <h3>Phân khu D</h3>
+                        </div>
+                    </div>
+                    <div class="subdivision-info">
+                        <h4>The Grand Island - Đảo Mặt Trời</h4>
+                        <p><strong>Thiên đường nghỉ dưỡng quy mô lớn</strong>, nơi hội tụ quảng trường biển và không gian
+                            sinh thái độc bản giữa lòng đô thị biển.</p>
+                        <ul>
+                            <li><strong>Quy mô:</strong> 480 ha</li>
+                            <li><strong>Chức năng:</strong> Du lịch – nghỉ dưỡng đẳng cấp quốc tế.</li>
+                            <li><strong>Tiện ích nổi bật:</strong> Quảng trường biển, khu thấp tầng sinh thái, tổ hợp nghỉ
+                                dưỡng &amp; giải trí đa trải nghiệm.</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
@@ -449,8 +641,15 @@
                     <div class="info-item">
                         <i class="fas fa-map-marker-alt"></i>
                         <div>
-                            <h4>Văn Phòng Dự Án</h4>
+                            <h4>Địa chỉ 1</h4>
                             <p>Tòa nhà T4-51, PhốManhattan, Khu đô thị Vinhomes Grand Park, TP. Thủ Đức , HCM</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Địa chỉ 2</h4>
+                            <p>L10-06 , Lầu 10 , Vincom Center, 72 Lê Thánh Tôn, P. bến Nghé, Quận 1, TP.HCM</p>
                         </div>
                     </div>
                     <div class="info-item">

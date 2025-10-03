@@ -283,26 +283,24 @@
                     <div style="margin-bottom: 30px;">
                         <h4 style="color: var(--primary-color); margin-bottom: 15px;">
                             <i class="fas fa-building" style="margin-right: 10px;"></i>
-                            Văn Phòng Dự Án
+                            Địa chỉ 1
                         </h4>
                         <p style="line-height: 1.8; color: var(--text-light);">
-                            Địa chỉ: Xã Long Hòa, Huyện Cần Giờ, TP.HCM<br>
-                            Giờ mở cửa: 8:00 - 20:00 (Tất cả các ngày trong tuần)
+                            Địa chỉ: Tòa nhà T4-51, PhốManhattan, Khu đô thị Vinhomes Grand Park, TP. Thủ Đức , HCM
                         </p>
                     </div>
                     
                     <div style="margin-bottom: 30px;">
                         <h4 style="color: var(--primary-color); margin-bottom: 15px;">
                             <i class="fas fa-city" style="margin-right: 10px;"></i>
-                            Văn Phòng TP.HCM
+                            Địa chỉ 2
                         </h4>
                         <p style="line-height: 1.8; color: var(--text-light);">
-                            Địa chỉ: Landmark 81, Quận Bình Thạnh, TP.HCM<br>
-                            Giờ mở cửa: 8:30 - 18:00 (Thứ 2 - Thứ 6)
+                            Địa chỉ: L10-06 , Lầu 10 , Vincom Center, 72 Lê Thánh Tôn, P. bến Nghé, Quận 1, TP.HCM
                         </p>
                     </div>
                     
-                    <div style="margin-bottom: 30px;">
+                    {{-- <div style="margin-bottom: 30px;">
                         <h4 style="color: var(--primary-color); margin-bottom: 15px;">
                             <i class="fas fa-bus" style="margin-right: 10px;"></i>
                             Xe Đưa Đón Miễn Phí
@@ -314,13 +312,13 @@
                             <i class="fas fa-calendar-check"></i>
                             Đặt Xe Tham Quan
                         </button>
-                    </div>
+                    </div> --}}
                     
                     <div>
-                        <h4 style="color: var(--primary-color); margin-bottom: 15px;">
+                        {{-- <h4 style="color: var(--primary-color); margin-bottom: 15px;">
                             <i class="fas fa-share-alt" style="margin-right: 10px;"></i>
                             Kết Nối Với Chúng Tôi
-                        </h4>
+                        </h4> --}}
                         <div style="display: flex; gap: 15px;">
                             <a href="{{settings('facebook')}}" style="width: 45px; height: 45px; background: var(--gradient-primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #fff; text-decoration: none;">
                                 <i class="fab fa-facebook-f"></i>

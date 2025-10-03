@@ -255,6 +255,7 @@ p {
     align-items: center;
     justify-content: center;
     overflow: hidden;
+    background: linear-gradient(135deg, rgba(5,102,141,0.9) 0%, rgba(0,168,150,0.1) 100%);
 }
 
 .hero-video {
