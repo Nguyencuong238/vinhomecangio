@@ -13,13 +13,15 @@
         }
 
         .utility-card img {
-            height: 330px;
             width: 100%;
             object-fit: cover;
         }
 
-        .utilities-grid.mt-30 .utility-card img {
-            height: 250px;
+        .utilities-grid .utility-card img {
+            height: 200px;
+        }
+        .utilities-grid.first-row .utility-card img {
+            height: 300px;
         }
 
         .glide__arrows {
@@ -80,112 +82,121 @@
         .glide__bullet.glide__bullet--active {
             background: #000;
         }
+
         .contact-card h4 {
             white-space: nowrap;
         }
+
         .gallery-item img {
             max-height: 520px;
         }
+
         h1.hero-title .text-gradient {
             background: linear-gradient(135deg, #48fbd5 0%, #02e7b6 100%);
             background-clip: text;
             -webkit-background-clip: text;
         }
+
         #subdivisions {
             background: linear-gradient(180deg, #f8f9fa 0%, #fff 100%);
             padding: 100px 0;
         }
+
         .subdivisions-grid {
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    gap: 30px
-}
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px
+        }
 
-.subdivision-card {
-    background: #fff;
-    border-radius: 20px;
-    overflow: hidden;
-    box-shadow: 0 8px 24px rgba(0,0,0,0.12);
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    opacity: 0;
-    transform: translateY(20px);
-}
+        .subdivision-card {
+            background: #fff;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            opacity: 0;
+            transform: translateY(20px);
+        }
 
-.subdivision-card.animate {
-    opacity: 1;
-    transform: translateY(0);
-    animation: fadeInUp 0.6s ease forwards
-}
+        .subdivision-card.animate {
+            opacity: 1;
+            transform: translateY(0);
+            animation: fadeInUp 0.6s ease forwards
+        }
 
-.subdivision-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 20px 60px rgba(0,0,0,0.2);
-}
+        .subdivision-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+        }
 
-.subdivision-image {
-    position: relative;
-    overflow: hidden
-}
+        .subdivision-image {
+            position: relative;
+            overflow: hidden
+        }
 
-.subdivision-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.5s ease;
-}
+        .subdivision-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
 
-.subdivision-card:hover .subdivision-image img {
-    transform: scale(1.1)
-}
+        .subdivision-card:hover .subdivision-image img {
+            transform: scale(1.1)
+        }
 
-.subdivision-overlay {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: linear-gradient(to top,rgb(0 0 0 / .8) 0%,transparent 100%);
-    padding: 30px 20px 20px
-}
+        .subdivision-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgb(0 0 0 / .8) 0%, transparent 100%);
+            padding: 30px 20px 20px
+        }
 
-.subdivision-overlay h3 {
-    color: #fff;
-    font-size: 24px
-}
+        .subdivision-overlay h3 {
+            color: #fff;
+            font-size: 24px
+        }
 
-.subdivision-info {
-    padding: 30px
-}
+        .subdivision-info {
+            padding: 30px
+        }
 
-.subdivision-info h4 {
-    color: var(--primary);
-    margin-bottom: 15px
-}
+        .subdivision-info h4 {
+            color: var(--primary);
+            margin-bottom: 15px
+        }
 
-.subdivision-info p {
-    color: var(--gray-600);
-    margin-bottom: 20px;
-    line-height: 1.7
-}
+        .subdivision-info p {
+            color: var(--gray-600);
+            margin-bottom: 20px;
+            line-height: 1.7
+        }
 
-.subdivision-info ul {
-    list-style: none
-}
+        .subdivision-info ul {
+            list-style: none
+        }
 
-.subdivision-info li {
-    color: var(--gray-700);
-    padding: 8px 0;
-    border-bottom: 1px solid var(--gray-200)
-}
+        .subdivision-info li {
+            color: var(--gray-700);
+            padding: 8px 0;
+            border-bottom: 1px solid var(--gray-200)
+        }
 
-.subdivision-info li:last-child {
-    border: none
-}
+        .subdivision-info li:last-child {
+            border: none
+        }
 
-.subdivision-info li:before {
-    content: "→";
-    color: var(--primary);
-    margin-right: 10px
-}
+        .subdivision-info li:before {
+            content: "→";
+            color: var(--primary);
+            margin-right: 10px
+        }
+        .utilities-grid.first-row {
+            grid-template-columns: repeat(2, 1fr);
+            margin-bottom: 30px;
+        }
     </style>
     <!-- Schema.org Structured Data -->
     <script type="application/ld+json">
@@ -221,12 +232,11 @@
 @endsection
 
 @section('page')
-    
     <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="hero-video">
             <div class="hero-overlay"></div>
-            <img src="{{asset('assets/images/vinhomes-green-paradise-tam-co-quoc-te.jpg')}}" alt="Green Paradise">
+            <img src="{{ asset('assets/images/vinhomes-green-paradise-tam-co-quoc-te.jpg') }}" alt="Green Paradise">
         </div>
         <div class="hero-content">
             <div class="hero-text">
@@ -239,8 +249,10 @@
                     Kiến tạo chuẩn sống mới cho 230.000 cư dân
                 </p>
                 <div class="hero-buttons">
-                    <button class="btn btn-primary" onclick="window.location.href='{{route('contact')}}'">Khám Phá Ngay</button>
-                    <button class="btn btn-secondary" onclick="window.location.href='{{route('contact')}}'">Tải Brochure</button>
+                    <button class="btn btn-primary" onclick="window.location.href='{{ route('contact') }}'">Khám Phá
+                        Ngay</button>
+                    <button class="btn btn-secondary" onclick="window.location.href='{{ route('contact') }}'">Tải
+                        Brochure</button>
                 </div>
             </div>
             <div class="hero-stats">
@@ -277,7 +289,10 @@
             <div class="about-grid">
                 <div class="about-content">
                     <h3>Thiên Đường Nghỉ Dưỡng Đẳng Cấp Thế Giới</h3>
-                    <p>Green Paradise Cần Giờ là siêu đô thị lấn biển đầu tiên tại Việt Nam, được phát triển dựa trên ba trụ cột: <strong>Xanh – Thông minh – Sinh thái</strong>. Với tổng vốn đầu tư lên tới 10 tỷ USD, dự án hứa hẹn trở thành "Thành phố" Du lịch – Giải trí – Dịch vụ – Nghỉ dưỡng & Trung tâm kinh tế – tài chính ven biển TP.HCM.</p>
+                    <p>Green Paradise Cần Giờ là siêu đô thị lấn biển đầu tiên tại Việt Nam, được phát triển dựa trên ba trụ
+                        cột: <strong>Xanh – Thông minh – Sinh thái</strong>. Với tổng vốn đầu tư lên tới 10 tỷ USD, dự án
+                        hứa hẹn trở thành "Thành phố" Du lịch – Giải trí – Dịch vụ – Nghỉ dưỡng & Trung tâm kinh tế – tài
+                        chính ven biển TP.HCM.</p>
                     <div class="about-features">
                         <div class="feature-item">
                             <i class="fas fa-leaf"></i>
@@ -295,7 +310,8 @@
                     <button class="btn btn-outline">Tìm Hiểu Thêm</button>
                 </div>
                 <div class="about-image">
-                    <img src="{{asset('assets/images/tien-ich-vinhomes-green-paradise-11.jpg')}}" alt="Green Paradise Overview">
+                    <img src="{{ asset('assets/images/tien-ich-vinhomes-green-paradise-11.jpg') }}"
+                        alt="Green Paradise Overview">
                     {{-- <div class="image-overlay">
                         <i class="fas fa-play-circle"></i>
                         <span>Xem Video Giới Thiệu</span>
@@ -314,7 +330,8 @@
             </div>
             <div class="location-content">
                 <div class="location-map">
-                    <img src="{{asset('assets/images/vi-tri-vinhomes-green-paradise.jpg')}}" alt="Vị trí vàng Vinhomes Green Paradise">
+                    <img src="{{ asset('assets/images/vi-tri-vinhomes-green-paradise.jpg') }}"
+                        alt="Vị trí vàng Vinhomes Green Paradise">
                     <div class="location-markers">
                         <div class="marker" style="top: 49%; left: 72%;">
                             <div class="marker-dot"></div>
@@ -361,56 +378,40 @@
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title">TIỆN ÍCH ĐẲNG CẤP</h2>
-                <p class="section-subtitle">Hệ Sinh Thái All-in-One Độc Nhất Việt Nam</p>
+                <p class="section-subtitle">Hệ Thống Tiện Ích Toàn Năng Cho Cư Dân Toàn Cầu</p>
+            </div>
+            <div class="utilities-grid first-row">
+                <div class="utility-card">
+                    <img src="{{ asset('assets/images/thap-108-tang-vinhomes-can-gio.webp') }}"
+                        alt="Tòa Tháp 108 Tầng – Hải Đăng Thế Kỷ Mới">
+                    <h3>Tòa Tháp 108 Tầng – Hải Đăng Thế Kỷ Mới</h3>
+                    <p>Biểu tượng phồn vinh của TP.HCM, tòa tháp 108 tầng vươn mình giữa biển xanh và rừng ngập mặn, hội tụ khách sạn 6 sao, TTTM xa xỉ, trung tâm hội nghị quốc tế và đài quan sát 360°, khẳng định vị thế Việt Nam trên bản đồ kiến trúc toàn cầu.</p>
+                </div>
+                <div class="utility-card">
+                    <img src="{{ asset('assets/images/vinhomes-green-paradise-tam-co-quoc-te.jpg') }}"
+                        alt="Blue Waves Theatre – Nhà Hát Sóng Xanh">
+                    <h3>Blue Waves Theatre – Nhà Hát Sóng Xanh</h3>
+                    <p>Tuyệt tác kiến trúc 7ha do Gensler thiết kế, quy mô quốc tế: Nhà hát 5.000 chỗ lớn nhất Đông Nam Á, 40 phòng hội nghị, khu tiệc cưới – triển lãm, quảng trường 50.000 người và cụm ẩm thực quốc tế. Đây sẽ là trái tim văn hóa – nghệ thuật – giải trí của Vinhomes Green Paradise.</p>
+                </div>
             </div>
             <div class="utilities-grid">
                 <div class="utility-card">
-                    <div class="utility-icon">
-                        <i class="fas fa-golf-ball"></i>
-                    </div>
-                    <h3>Sân Golf 36 Lỗ</h3>
-                    <p>Thiết kế bởi Tiger Woods & Robert Trent Jones II</p>
-                    <span class="utility-tag">Đẳng Cấp Thế Giới</span>
-                </div>
-                <div class="utility-card featured">
-                    <div class="utility-icon">
-                        <i class="fas fa-water"></i>
-                    </div>
-                    <h3>Paradise Lagoon 443ha</h3>
-                    <p>Biển hồ nhân tạo lớn nhất thế giới</p>
-                    <span class="utility-tag">Kỷ Lục Guinness</span>
+                    <img src="{{ asset('assets/images/paradise-lagoon-bien-ho-nhan-tao.jpg') }}" alt="Paradise Lagoon – Vịnh Thiên Đường 443ha">
+                    <h3>Paradise Lagoon – Vịnh Thiên Đường 443ha</h3>
+                    <p>Biển hồ nhân tạo lớn nhất thế giới, tái hiện vẻ đẹp Maldives với mặt nước xanh ngọc, cát trắng mịn và không gian nghỉ dưỡng bất tận ngay giữa lòng đại đô thị.</p>
                 </div>
                 <div class="utility-card">
-                    <div class="utility-icon">
-                        <i class="fas fa-building"></i>
-                    </div>
-                    <h3>Tòa Tháp 108 Tầng</h3>
-                    <p>Top 10 tòa nhà cao nhất thế giới</p>
-                    <span class="utility-tag">Biểu Tượng Mới</span>
+                    <img src="{{ asset('assets/images/tien-ich-vinhomes-green-paradise-5.jpg') }}"
+                        alt="Landmark Harbour – Cảng Du Thuyền 5★ Quốc Tế">
+                    <h3>Landmark Harbour – Cảng Du Thuyền 5★ Quốc Tế</h3>
+                    <p>Điểm đến của những siêu du thuyền xa hoa toàn cầu, kết nối trực tiếp với chuỗi nhà hàng, khách sạn và phố ẩm thực ven biển đẳng cấp quốc tế.</p>
+                    
                 </div>
                 <div class="utility-card">
-                    <div class="utility-icon">
-                        <i class="fas fa-ship"></i>
-                    </div>
-                    <h3>Marina 5 Sao</h3>
-                    <p>Cảng du thuyền quốc tế cao cấp</p>
-                    <span class="utility-tag">Ultra Luxury</span>
-                </div>
-                <div class="utility-card">
-                    <div class="utility-icon">
-                        <i class="fas fa-hospital"></i>
-                    </div>
-                    <h3>Cleveland Clinic</h3>
-                    <p>Bệnh viện số 1 nước Mỹ</p>
-                    <span class="utility-tag">Y Tế Quốc Tế</span>
-                </div>
-                <div class="utility-card">
-                    <div class="utility-icon">
-                        <i class="fas fa-theater-masks"></i>
-                    </div>
-                    <h3>Blue Wave Theatre</h3>
-                    <p>Nhà hát 5.000 chỗ ngồi</p>
-                    <span class="utility-tag">Nghệ Thuật</span>
+                    <img src="{{ asset('assets/images/sieu-do-thi-esg-vinhomes-green-paradise.jpg') }}"
+                        alt="2 Sân Golf 18 Lỗ">
+                    <h3>2 SÂN GOLF 18 LỖ – DẤU ẤN HUYỀN THOẠI QUỐC TẾ</h3>
+                    <p>Sunset (West) – thiết kế bởi huyền thoại Tiger Woods Sunrise (East) – kiến tạo bởi bậc thầy Robert Trent Jones II Thiên đường golf đẳng cấp, đặc quyền dành riêng cho giới thượng lưu</p>
                 </div>
             </div>
         </div>
@@ -427,7 +428,8 @@
             <div class="subdivisions-grid">
                 <div class="subdivision-card animate">
                     <div class="subdivision-image">
-                        <img src="https://vinhomesgreenparadise.net/assets/images/the-haven-bay-vinh-tien.jpg" alt="The Haven Bay">
+                        <img src="https://vinhomesgreenparadise.net/assets/images/the-haven-bay-vinh-tien.jpg"
+                            alt="The Haven Bay">
                         <div class="subdivision-overlay">
                             <h3>Phân khu A</h3>
                         </div>
@@ -447,7 +449,8 @@
 
                 <div class="subdivision-card animate">
                     <div class="subdivision-image">
-                        <img src="https://vinhomesgreenparadise.net/assets/images/the-greean-bay-vinh-ngoc.jpg" alt="The Green Bay">
+                        <img src="https://vinhomesgreenparadise.net/assets/images/the-greean-bay-vinh-ngoc.jpg"
+                            alt="The Green Bay">
                         <div class="subdivision-overlay">
                             <h3>Phân khu B</h3>
                         </div>
@@ -467,14 +470,16 @@
 
                 <div class="subdivision-card animate">
                     <div class="subdivision-image">
-                        <img src="https://vinhomesgreenparadise.net/assets/images/the-paradise-mui-danh-vong.jpg" alt="The Paradise">
+                        <img src="https://vinhomesgreenparadise.net/assets/images/the-paradise-mui-danh-vong.jpg"
+                            alt="The Paradise">
                         <div class="subdivision-overlay">
                             <h3>Phân khu C</h3>
                         </div>
                     </div>
                     <div class="subdivision-info">
                         <h4>The Paradise - Mũi Danh Vọng</h4>
-                        <div><strong>Biểu tượng phồn vinh của đại đô thị</strong>, nơi định hình đường chân trời mới với những
+                        <div><strong>Biểu tượng phồn vinh của đại đô thị</strong>, nơi định hình đường chân trời mới với
+                            những
                             công trình mang tầm vóc toàn cầu.</div>
                         <ul>
                             <li><strong>Quy mô:</strong> 318 ha</li>
@@ -487,7 +492,8 @@
 
                 <div class="subdivision-card animate">
                     <div class="subdivision-image">
-                        <img src="https://vinhomesgreenparadise.net/assets/images/the-grand-island-dao-mat-troi.jpg" alt="The Grand Island">
+                        <img src="https://vinhomesgreenparadise.net/assets/images/the-grand-island-dao-mat-troi.jpg"
+                            alt="The Grand Island">
                         <div class="subdivision-overlay">
                             <h3>Phân khu D</h3>
                         </div>
@@ -519,12 +525,13 @@
                 <div class="glide__track" data-glide-el="track">
                     <ul class="glide__slides">
                         @for ($i = 1; $i <= 5; $i++)
-                        <li class="glide__slide gallery-item">
-                            <img src="assets/images/tien-ich-toan-cau-vinhomes-green-paradise-{{ $i }}.jpg" alt="tien-ich-toan-cau-vinhomes-green-paradise-{{ $i }}">
-                            {{-- <div class="gallery-info">
+                            <li class="glide__slide gallery-item">
+                                <img src="assets/images/tien-ich-toan-cau-vinhomes-green-paradise-{{ $i }}.jpg"
+                                    alt="tien-ich-toan-cau-vinhomes-green-paradise-{{ $i }}">
+                                {{-- <div class="gallery-info">
                                 <h4>Toàn Cảnh Dự Án</h4>
                             </div> --}}
-                        </li>
+                            </li>
                         @endfor
 
                         @for ($i = 1; $i <= 8; $i++)
@@ -535,9 +542,8 @@
                                     <h4>Phân Khu A - Vịnh Tiên</h4>
                                 </div> --}}
                             </li>
-                            
                         @endfor
-                        
+
                     </ul>
                 </div>
 
@@ -550,8 +556,7 @@
                 <div class="glide__bullets" data-glide-el="controls[nav]">
 
                     @for ($i = 0; $i < 13; $i++)
-                    <button class="glide__bullet" data-glide-dir="={{$i}}"></button>
-                    
+                        <button class="glide__bullet" data-glide-dir="={{ $i }}"></button>
                     @endfor
                 </div>
             </div>
@@ -610,19 +615,19 @@
                 <p class="section-subtitle">Cập Nhật Mới Nhất Về Dự Án</p>
             </div>
             <div class="news-grid">
-                @foreach($posts as $post)
-                @break($loop->index >= 3)
-                <article class="news-card">
-                    <div class="news-image">
-                        <img src="{{$post->getFirstMediaUrl('media')}}" alt="{{$post->title}}">
-                        <span class="news-date">{{$post->created_at->format('d/m/Y')}}</span>
-                    </div>
-                    <div class="news-content">
-                        <h3>{{$post->title}}</h3>
-                        <p>{{Str::words($post->excerpt, 25)}}</p>
-                        <a href="{{$post->showUrl()}}" class="read-more">Xem thêm →</a>
-                    </div>
-                </article>
+                @foreach ($posts as $post)
+                    @break($loop->index >= 3)
+                    <article class="news-card">
+                        <div class="news-image">
+                            <img src="{{ $post->getFirstMediaUrl('media') }}" alt="{{ $post->title }}">
+                            <span class="news-date">{{ $post->created_at->format('d/m/Y') }}</span>
+                        </div>
+                        <div class="news-content">
+                            <h3>{{ $post->title }}</h3>
+                            <p>{{ Str::words($post->excerpt, 25) }}</p>
+                            <a href="{{ $post->showUrl() }}" class="read-more">Xem thêm →</a>
+                        </div>
+                    </article>
                 @endforeach
             </div>
         </div>
@@ -656,20 +661,20 @@
                         <i class="fas fa-phone"></i>
                         <div>
                             <h4>Hotline 24/7</h4>
-                            <p>{{settings('phone')}}</p>
+                            <p>{{ settings('phone') }}</p>
                         </div>
                     </div>
                     <div class="info-item">
                         <i class="fas fa-envelope"></i>
                         <div>
                             <h4>Email</h4>
-                            <p>{{settings('contact_email')}}</p>
+                            <p>{{ settings('contact_email') }}</p>
                         </div>
                     </div>
                     <div class="social-links">
-                        <a href="{{settings('facebook')}}"><i class="fab fa-facebook"></i></a>
-                        <a href="{{settings('youtube')}}"><i class="fab fa-youtube"></i></a>
-                        <a href="{{settings('tiktok')}}"><i class="fab fa-tiktok"></i></a>
+                        <a href="{{ settings('facebook') }}"><i class="fab fa-facebook"></i></a>
+                        <a href="{{ settings('youtube') }}"><i class="fab fa-youtube"></i></a>
+                        <a href="{{ settings('tiktok') }}"><i class="fab fa-tiktok"></i></a>
                     </div>
                 </div>
                 <form class="contact-form">
@@ -759,6 +764,5 @@
                 $(this).find('button').prop('disabled', false);
             });
         });
-        
     </script>
 @endsection
